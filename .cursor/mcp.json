@@ -1,12 +1,15 @@
 {
   "mcpServers": {
-    "kontent-ai": {
+    "dapi-stdio": {
       "command": "node",
       "args": ["C:/Repositories/github/PeterSkodaKontentAi/kontent-ai-mcp/build/index.js"],
       "env": {
         "KONTENT_API_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiM2VhNjIyMWQwZWQ0Y2NhYWE0YzUzMzE3NTVhNTIyNyIsImlhdCI6MTc0NDcwNzA1NywibmJmIjoxNzQ0NzA3MDU3LCJleHAiOjE3NjA1MTgyMDAsInZlciI6IjMuMC4wIiwidWlkIjoidmlydHVhbF84MDNiNDIwMi05ZDZiLTQwNmUtOTAwYy0yNDI5MTE1NWRmYTEiLCJzY29wZV9pZCI6IjY0ODk4ZGRlZjFlODQ0NGRiYjQ5NTRiZDQ2ZTg3YWM3IiwicHJvamVjdF9jb250YWluZXJfaWQiOiIzNzQyMTFjYzNhODkwMDZmYzFjOGFjYjBjNDg5YmViOCIsImF1ZCI6Im1hbmFnZS5rZW50aWNvY2xvdWQuY29tIn0.IwdE3WsoFEXAUF-SVRYxpvWsXI9qqqUoZdfjmyCsBQ8",
         "KONTENT_ENVIRONMENT_ID": "6b9fe346-6370-0090-77ea-db7d9edb24ac"
       }
+    },
+    "dapi-sse": {
+      "url": "http://localhost:3001/sse"
     }
   }
 }

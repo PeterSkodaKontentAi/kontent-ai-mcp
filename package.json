@@ -1,6 +1,6 @@
 {
-  "name": "kontent-ai-mcp",
-  "version": "1.0.0",
+  "name": "test-kontent-mcp",
+  "version": "0.0.1-alpha",
   "main": "index.js",
   "type": "module",
   "bin": {
@@ -14,10 +14,17 @@
   "files": [
     "build"
   ],
-  "keywords": [],
+  "keywords": [
+    "alpha",
+    "preview",
+    "experimental",
+    "kontent-ai",
+    "mcp",
+    "model-context-protocol"
+  ],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "Experimental implementation of Model Context Protocol",
   "dependencies": {
     "@kontent-ai/delivery-sdk": "^16.1.0",
     "@kontent-ai/management-sdk": "^7.8.0",

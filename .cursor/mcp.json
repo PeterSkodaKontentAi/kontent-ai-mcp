@@ -1,6 +1,6 @@
 {
   "mcpServers": {
-    "dapi-stdio": {
+    "kontent-ai-stdio": {
       "command": "node",
       "args": ["C:/Repositories/github/PeterSkodaKontentAi/kontent-ai-mcp/build/index.js"],
       "env": {
@@ -8,7 +8,7 @@
         "KONTENT_ENVIRONMENT_ID": "6b9fe346-6370-0090-77ea-db7d9edb24ac"
       }
     },
-    "dapi-sse": {
+    "kontent-ai-sse": {
       "url": "http://localhost:3001/sse"
     }
   }

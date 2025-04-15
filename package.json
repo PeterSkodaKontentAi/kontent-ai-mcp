@@ -8,6 +8,7 @@
   },
   "scripts": {
     "build": "tsc",
+    "start:stdio": "node build/index.js",
     "start:sse": "node build/sse.js"
   },
   "files": [

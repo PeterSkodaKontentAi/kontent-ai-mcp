@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "kontent-ai": {
+      "command": "node",
+      "args": ["C:/Users/SimonaKruppova/Desktop/kontent-ai-mcp/build/index.js"]
+    }
+  }
+}

@@ -1,11 +1,9 @@
 {
   "name": "test-kontent-mcp",
-  "version": "0.0.1-alpha",
+  "version": "0.0.3-alpha",
   "main": "index.js",
   "type": "module",
-  "bin": {
-    "weather": "./build/index.js"
-  },
+  "bin": "./build/index.js",
   "scripts": {
     "build": "tsc",
     "start:stdio": "node build/index.js",

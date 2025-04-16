@@ -9,6 +9,9 @@
     },
     "kontent-ai-sse": {
       "url": "http://localhost:3001/sse"
+    },
+    "kontent-ai-sse-azure": {
+      "url": "https://mcpsse-b3cadfhugsg6guab.westeurope-01.azurewebsites.net/sse"
     }
   }
 }

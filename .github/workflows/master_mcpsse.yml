@@ -61,4 +61,4 @@ jobs:
           app-name: 'McpSSE'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_004AF4216BC14B58B67C355543C5B318 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7F5298D068B841099E93B8CC88214023 }}

@@ -271,7 +271,8 @@ export const createServer = () => {
         environmentId: process.env.KONTENT_ENVIRONMENT_ID ?? "",
       });
 
-      const response = await client
+      try {
+        const response = await client
         .upsertLanguageVariant()
         .byItemCodename(itemCodename)
         .byLanguageCodename(languageCodename)
@@ -285,14 +286,24 @@ export const createServer = () => {
         })
         .toPromise();
 
-      return {
-        content: [
-          {
-            type: "text",
-            text: JSON.stringify(response.data),
-          },
-        ],
-      };
+        return {
+          content: [
+            {
+              type: "text",
+              text: JSON.stringify(response.data),
+            },
+          ],
+        };
+      } catch (error) {
+        return {
+          content: [
+            {
+              type: "text",
+              text: `Failed to upsert variant: ${error instanceof Error ? error.message : String(error)}`,
+            },
+          ],
+        };
+      }
     }
   );
 

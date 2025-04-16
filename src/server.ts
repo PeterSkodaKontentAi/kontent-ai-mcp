@@ -126,7 +126,7 @@ export const createServer = () => {
     }
   );
   server.tool(
-    "list-all-content-types-mapi",
+    "list-content-types-mapi",
     "Get all content types from Management API",
     {},
     async () => {
@@ -137,6 +137,81 @@ export const createServer = () => {
 
       const response = await client
         .listContentTypes()
+        .toPromise();
+
+      return {
+        content: [
+          {
+            type: "text",
+            text: JSON.stringify(response.data),
+          },
+        ],
+      };
+    }
+  );
+  server.tool(
+    "list-languages-mapi",
+    "Get all languages from Management API",
+    {},
+    async () => {
+      const client = createManagementClient({
+        apiKey: process.env.KONTENT_API_KEY ?? "",
+        environmentId: process.env.KONTENT_ENVIRONMENT_ID ?? "",
+      });
+
+      const response = await client
+        .listLanguages()
+        .toPromise();
+
+      return {
+        content: [
+          {
+            type: "text",
+            text: JSON.stringify(response.data),
+          },
+        ],
+      };
+    }
+  );
+  server.tool(
+    "get-asset-mapi",
+    "Get a specific asset by codename from Management API",
+    {
+      assetCodename: z.string().describe("Codename of the asset to retrieve")
+    },
+    async ({ assetCodename }) => {
+      const client = createManagementClient({
+        apiKey: process.env.KONTENT_API_KEY ?? "",
+        environmentId: process.env.KONTENT_ENVIRONMENT_ID ?? "",
+      });
+
+      const response = await client
+        .viewAsset()
+        .byAssetCodename(assetCodename)
+        .toPromise();
+
+      return {
+        content: [
+          {
+            type: "text",
+            text: JSON.stringify(response.data),
+          },
+        ],
+      };
+    }
+  );
+  server.tool(
+    "list-assets-mapi",
+    "Get all assets from Management API",
+    {},
+    async () => {
+      const client = createManagementClient({
+        apiKey: process.env.KONTENT_API_KEY ?? "",
+        environmentId: process.env.KONTENT_ENVIRONMENT_ID ?? "",
+      });
+
+      const response = await client
+        .listAssets()
         .toPromise();
 
       return {

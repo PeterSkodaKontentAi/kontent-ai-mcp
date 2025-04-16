@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import { SSEServerTransport } from "@modelcontextprotocol/sdk/server/sse.js";
 import express from "express";
 import { createServer } from "./server.js";
